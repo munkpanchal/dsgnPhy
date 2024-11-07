@@ -1,0 +1,46 @@
+.footer-wrapper {
+    @apply py-16;
+    .footer-top {
+        @apply flex gap-8 max-sm:flex-col;
+        .f-wrap {
+            h3 {
+                @apply text-lg mb-4 uppercase;
+                color: var(--clr-yellow);
+            }
+            a {
+                color: white;
+                display: block;
+                width: max-content;
+                position: relative;
+                @include mobile {
+                    width: 100%;
+                    text-wrap: balance;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    height: 1px;
+                    width: 0;
+                    background-color: white;
+                    display: block;
+                    transform-origin: left;
+                    transition: all 300ms ease-in-out;
+                }
+                @include landscapes {
+                    &:hover::before {
+                        width: 100%;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                flex: 1;
+            }
+            &:last-child {
+                flex: 2;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.header {
+    @apply sticky top-0 z-50;
+    &-wrapper {
+        @apply flex justify-between py-8;
+
+        .logo {
+            @apply w-[120px] sm:w-[200px] flex items-center;
+            img {
+                @apply w-full;
+            }
+        }
+        .header-right {
+            @apply flex gap-4;
+
+            .hamburger {
+                @apply w-4 h-4 sm:w-6 sm:h-6 flex flex-col justify-center gap-3;
+                .line {
+                    @apply h-[2px] w-full bg-black;
+                    transform-origin: center center;
+                }
+            }
+            .ham-btn {
+                &:not(:hover) {
+                    .hamburger .line:first-child {
+                        animation: anim01 600ms cubic-bezier(0.47, 0, 0.745, 0.715) both;
+                    }
+                    .hamburger .line:last-child {
+                        animation: anim02 600ms cubic-bezier(0.47, 0, 0.745, 0.715) both;
+                    }
+                }
+                &:hover {
+                    .line:first-child {
+                        animation: anim1 600ms cubic-bezier(0.47, 0, 0.745, 0.715) both;
+                    }
+
+                    .line:last-child {
+                        animation: anim2 600ms cubic-bezier(0.47, 0, 0.745, 0.715) both;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fixed-bg {
+    @apply fixed top-0 left-0 w-full h-full -z-10;
+    video {
+        @apply h-full w-full object-cover object-center;
+    }
+}

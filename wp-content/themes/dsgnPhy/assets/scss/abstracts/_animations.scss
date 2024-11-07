@@ -1,0 +1,62 @@
+// Hamburger Animation Start
+$offset: 6.5px;
+@keyframes anim1 {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    30% {
+        transform: translateY($offset) rotate(0deg) scale(0.75);
+    }
+    70% {
+        transform: translateY($offset) rotate(0deg) scale(0.75);
+    }
+    100% {
+        transform: translateY($offset) rotate(45deg);
+    }
+}
+
+@keyframes anim2 {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    30% {
+        transform: translateY(-$offset) rotate(0deg) scale(0.75);
+    }
+    70% {
+        transform: translateY(-$offset) rotate(0deg) scale(0.75);
+    }
+    100% {
+        transform: translateY(-$offset) rotate(-45deg);
+    }
+}
+@keyframes anim01 {
+    0% {
+        transform: translateY($offset) rotate(45deg);
+    }
+    30% {
+        transform: translateY($offset) rotate(0deg) scale(0.75);
+    }
+    70% {
+        transform: translateY($offset) rotate(0deg) scale(0.75);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes anim02 {
+    0% {
+        transform: translateY(-$offset) rotate(-45deg);
+    }
+    30% {
+        transform: translateY(-$offset) rotate(0deg) scale(0.75);
+    }
+    70% {
+        transform: translateY(-$offset) rotate(0deg) scale(0.75);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+// Hamburger Animation End

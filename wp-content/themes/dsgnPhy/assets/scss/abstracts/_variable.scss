@@ -1,0 +1,21 @@
+// root file
+:root {
+    /* font families */
+
+    --ff-poppins: "Poppins", sans-serif;
+
+    //  font weights
+    --fw-base: 400;
+    --fw-medium: 700;
+    --fw-bold: 900;
+
+    //  primary color
+    --clr-black: #242424;
+    --clr-white: #f7f7f7;
+    --clr-yellow: #ffcf06;
+    --clr-gray: #5a585a;
+    --clr-bg: #f8f5e5;
+
+    --width-container: min(1200px, 100%);
+    --header-height: 6rem;
+}

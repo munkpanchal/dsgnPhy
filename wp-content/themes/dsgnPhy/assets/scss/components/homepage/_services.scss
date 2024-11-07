@@ -1,0 +1,38 @@
+.services {
+    background-color: var(--clr-yellow);
+
+    .section-title {
+        @apply text-black font-semibold;
+    }
+    .services-wrap {
+        @apply py-16 flex justify-center gap-8 max-sm:flex-col max-sm:items-center;
+
+        .service {
+            @apply flex flex-col gap-8;
+            width: min(300px, 100%);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #00000060;
+            background-color: #00000020;
+            backdrop-filter: blur(2px);
+            &-heading {
+                @apply text-xl capitalize font-medium bg-black text-white w-max px-4 py-2 rounded-xl pl-9 relative;
+                &::before {
+                    content: "/";
+                    position: absolute;
+                    left: 1rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            &-list {
+                @apply flex flex-col gap-4;
+                list-style-type: none;
+                padding: 0;
+                li {
+                    @apply text-xl text-white;
+                }
+            }
+        }
+    }
+}

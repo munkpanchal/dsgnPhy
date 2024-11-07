@@ -1,0 +1,49 @@
+// Typography will come here
+* {
+    font-family: var(--ff-secondary);
+}
+
+body {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    ::selection {
+        background: var(--clr-yellow);
+        color: var(--clr-black);
+    }
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-primary);
+}
+
+.cursor-dot {
+    height: 8px;
+    width: 8px;
+    background-color: wheat;
+}
+.cursor-box {
+    height: 40px;
+    width: 40px;
+    border: 1px solid wheat;
+}
+
+.cursor-box,
+.cursor-dot {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    isolation: isolate;
+    // pointer-events: none;
+    @include mobile {
+        display: none;
+    }
+}
