@@ -2,6 +2,10 @@
     min-height: auto;
     height: calc(100vh - var(--header-height));
     padding-block: 0;
+    @include mobile {
+        height: auto;
+        padding-block: var(--header-height);
+    }
     .home-hero-wrapper {
         display: flex;
         justify-content: center;
@@ -16,8 +20,20 @@
         @include mobile {
             gap: 3rem;
         }
+        .hero-content {
+            @apply flex flex-col gap-12 mx-auto;
+            width: min(600px, 100%);
+        }
+        .hc-wrap {
+            @apply max-sm:px-12;
+            display: flex;
+
+            &:nth-child(2) {
+                justify-content: flex-end;
+            }
+        }
         h2 {
-            @apply text-2xl sm:text-5xl lg:text-7xl;
+            @apply text-5xl lg:text-7xl;
             position: relative;
             color: #f8f5e5;
             $offset: 40%;
@@ -36,16 +52,6 @@
                 text-transform: capitalize;
                 font-size: 12px;
                 letter-spacing: 1px;
-            }
-
-            &:first-child {
-                transform: translateX(-$offset);
-            }
-            &:nth-child(2) {
-                transform: translateX($offset);
-            }
-            &:nth-child(3) {
-                transform: translateY(calc($offset/10));
             }
         }
     }

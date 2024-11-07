@@ -11,7 +11,7 @@ get_header()
 
     <?php
 
-    // get_template_part("/component/homepage/content", "hero");
+    get_template_part("/component/homepage/content", "hero");
 
     // get_template_part("/component/homepage/content", "about")
     get_template_part("/component/homepage/content", "services");
